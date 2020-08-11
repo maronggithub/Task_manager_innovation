@@ -3,7 +3,8 @@ function saveAllTasks(allTasks) {
 }
 
 function getAllTasks() {
-  return JSON.parse(localStorage.getItem("tasks"));
+  let tasks = JSON.parse(localStorage.getItem("tasks"));
+  return tasks ? tasks : [];
 }
 
 function removeTask(id) {
